@@ -253,14 +253,42 @@ console.info("filtered inventors 1500" ,  filtered);
 
 // homework 10
 
-// const FirstLastNames = inventors.map( n => {
-//     let f = n.first
-//     let l = n.last
-//     return [f,l]
-// });
+const FirstLastNames = inventors.map( n => {
+    let f = n.first
+    let l = n.last
+    return [f,l]
+});
 
-const FirstLastNames = inventors.map( n => [n.last,n.first]);
-    
 
 // homework 11
+
+const FirstLastNamesII = inventors.map( n => [n.last,n.first]);
+    
+
+// homework 12
+
+const totalYearsLived = inventors.reduce((acc,y) => {
+    acc += y.year * 1;
+    return acc;
+}, 0);
+
+function av(employees) {
+    var sum = employees.reduce((acc, employee) => {
+        acc += employee.year * 1;
+        return acc
+    },0);
+    return sum;
+}
+
+ console.info(av(inventors))
+
+//  homework 13
+
+
+let sortedOut = function sortingByYear (i) {
+    var year = i.map( i=> i.year);
+    var sorted = year.sort(function(a, b){return a - b});
+    return sorted;
+};
+
 
