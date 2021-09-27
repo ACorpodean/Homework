@@ -166,6 +166,10 @@ const comments = [{
     id: 542328
 }];
 
+// const friends = [{
+//         name: "Lux",
+//         year: 1988
+//     }];
 
 // homework 6 
 
@@ -329,5 +333,91 @@ let sortedOut = function sortingByYear (inventors) {
 // filterItems(allText, 'de');
 
 
+// Homework 16
 
+// var today = new Date();
+// var year = today.getFullYear();
+
+const exists = friends.some( (p) => {
+    var today = new Date();
+    var currentyear = today.getFullYear();
+    // var age = currentyear - p.year;
+    // console.warn(p.year);
+    // console.error(currentyear);
+    // console.info(age);
+    return (currentyear - p.year) >= 19});
+
+    console.info(exists);
+
+
+    // Homework 17
+
+const allOlder = friends.every( (p) => {
+        var today = new Date();
+        var currentyear = today.getFullYear();
+        return (currentyear - p.year) >= 19});
+
+    console.info(allOlder);
+
+// Homework 18
+
+const commentID = comments.find( ({ id }) => id === 823423);
+console.info(commentID);
+
+// Homework 19
+
+// const index = comments.findIndex( p  => p.id === 2039842);
+
+// function deleteComment(array, cid) {
+//     const index = array.findIndex( p  => p.id === cid);
+//     const object = array[index];
+//     return array[index];
+// };
+
+// console.warn(deleteComment(comments, 823423));
+
+
+// object = (array, cid) => {
+//     const index = array.findIndex( p  => p.id === cid);
+//     const object = array[index];
+//     return array[index];
+// };
+
+
+// var comments = object(comments,823423);
+
+// (5) [{…}, empty, {…}, {…}, {…}]
+// 0: {text: 'Love this!', id: 523423}
+// 2: {text: 'You are the best', id: 2039842}
+// 3: {text: 'Ramen is my fav food ever', id: 123523}
+// 4: {text: 'Nice Nice Nice!', id: 542328}
+// length: 5
+//  it leaveas an empty space in the array and index is missing from it. 
+// Overall lenght the same?
+
+// const removedComment = comments.splice(object(comments,823423),  1);
+
+
+// var ind = comments.findIndex(function(element){
+//    return element.id===823423;
+// })
+// if(ind!==-1){
+// comments.splice(ind, 1)
+// }
+// console.log (comments)
+
+// function removeObj (array, cid){
+//     var ind = array.findIndex( p  => p.id === cid);
+//     if (ind!== -1) {
+//         array.splice(ind,  1);
+//     }
+//    return window.comments = array;
+// };
+
+
+function removeObj (array, cid){
+    var ind = array.findIndex( p  => p.id === cid)
+    array.splice(ind,  1);
+    return window.comments = array;
+};
 
