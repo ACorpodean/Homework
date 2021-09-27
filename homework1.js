@@ -135,6 +135,38 @@ const inventors = [{
 
 const people = ["Bernhard, Sandra", "Bethea, Erin", "Becker, Carl", "Bentsen, Lloyd", "Beckett, Samuel", "Blake, William", "Berger, Ric", "Beddoes, Mick", "Beethoven, Ludwig", "Belloc, Hilaire", "Begin, Menachem", "Bellow, Saul", "Benchley, Robert", "Blair, Robert", "Benenson, Peter", "Benjamin, Walter", "Berlin, Irving", "Benn, Tony", "Benson, Leana", "Bent, Silas", "Berle, Milton", "Berry, Halle", "Biko, Steve", "Beck, Glenn", "Bergman, Ingmar", "Black, Elk", "Berio, Luciano", "Berne, Eric", "Berra, Yogi", "Berry, Wendell", "Bevan, Aneurin", "Ben-Gurion, David", "Bevel, Ken", "Biden, Joseph", "Bennington, Chester", "Bierce, Ambrose", "Billings, Josh", "Birrell, Augustine", "Blair, Tony", "Beecher, Henry", "Biondo, Frank"];
 
+
+const friends = [{
+    name: "Wes",
+    year: 1988
+}, {
+    name: "Kait",
+    year: 1986
+}, {
+    name: "Irv",
+    year: 1970
+}, {
+    name: "Lux",
+    year: 2015
+}];
+const comments = [{
+    text: "Love this!",
+    id: 523423
+}, {
+    text: "Super good",
+    id: 823423
+}, {
+    text: "You are the best",
+    id: 2039842
+}, {
+    text: "Ramen is my fav food ever",
+    id: 123523
+}, {
+    text: "Nice Nice Nice!",
+    id: 542328
+}];
+
+
 // homework 6 
 
 const arrayToObject = (array, param) => {
@@ -291,11 +323,10 @@ let sortedOut = function sortingByYear (inventors) {
 // homework 14
 
 // const allObjects = document.querySelectorAll('div.mw-category li');
-// const allArray = Array.from(allobjects);
-// const allText = allarray.map( i=> i.innerText);
-// // const allNoSpace = alltext.map(str => str.replace(/\s/g, ''));
-// const allDe = alltext.filter(n => n === 'de');
-
+// const allArray = Array.from(allObjects);
+// const allText = allArray.map( i=> i.innerText);
+// const filterItems = (arr, query) => {return arr.filter(el => el.toLowerCase().indexOf(query.toLowerCase()) !== -1)}
+// filterItems(allText, 'de');
 
 
 
