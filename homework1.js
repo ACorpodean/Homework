@@ -254,41 +254,49 @@ console.info("filtered inventors 1500" ,  filtered);
 // homework 10
 
 const FirstLastNames = inventors.map( n => {
-    let f = n.first
-    let l = n.last
+    const f = n.first
+    const l = n.last
     return [f,l]
 });
 
+const FirstLastNamesII = inventors.map( n => [n.last,n.first]);
 
 // homework 11
 
-const FirstLastNamesII = inventors.map( n => [n.last,n.first]);
-    
+const Homework11 = inventors.find( i => i.first === "Galileo" && i.last ==="Galilei")
+ 
+console.info(Homework11);
 
 // homework 12
 
-const totalYearsLived = inventors.reduce((acc,y) => {
-    acc += y.year * 1;
+const totalYearsLived = inventors.reduce((acc,inventors) => {
+    acc += inventors.passed - inventors.year;
     return acc;
 }, 0);
 
-function av(employees) {
-    var sum = employees.reduce((acc, employee) => {
-        acc += employee.year * 1;
-        return acc
-    },0);
-    return sum;
-}
-
- console.info(av(inventors))
+console.info(totalYearsLived);
 
 //  homework 13
 
 
-let sortedOut = function sortingByYear (i) {
-    var year = i.map( i=> i.year);
-    var sorted = year.sort(function(a, b){return a - b});
-    return sorted;
+let sortedOut = function sortingByYear (inventors) {
+    inventors.sort(function(a, b){return b.year - a.year});
+    return inventors;
 };
+
+
+
+
+
+// homework 14
+
+// const allObjects = document.querySelectorAll('div.mw-category li');
+// const allArray = Array.from(allobjects);
+// const allText = allarray.map( i=> i.innerText);
+// // const allNoSpace = alltext.map(str => str.replace(/\s/g, ''));
+// const allDe = alltext.filter(n => n === 'de');
+
+
+
 
 
